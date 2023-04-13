@@ -1,0 +1,693 @@
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0px;
+    text-align: center;
+    background-color: rgb(251, 255, 255);
+    margin:0px;
+  }
+  #wrapper {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  p,li {
+    font-size: 18px;
+  }
+  header {
+    display: grid;
+    grid-template-columns: auto 200px auto;
+    height: 120px;
+  }
+  header img {
+    height:120px;
+    width: 173.567px;
+  }
+  #headLeft {
+    background-image: url("images/background.jpg");
+    animation-name: moveLeft;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+  }
+  #headRight {
+    background-image: url("images/background.jpg");
+    animation-name: moveRight;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes moveLeft{
+    0% {
+        background-position: 0% 0%;	
+    } 
+    100% {		
+        background-position: 50% 0%;	
+    }
+}
+  @keyframes moveRight{
+    0% {
+      background-position: 100% 0%;	
+    } 
+    100% {		
+      background-position: 50% 0%;	
+  }
+} 
+  #headnav {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom:5%;
+    width:100%;
+  }
+  #headnav ul {
+    display: grid;
+    grid-template-columns: auto;
+    padding-left: 0%;
+    margin-top: 5px;
+  }
+  #headnav li {
+    list-style-type:none;
+    align-items: center;
+    font-weight: bold;
+    padding: 15px;
+    transition: background-color 1s linear;
+    border-bottom: 2px solid #001db4;
+  } 
+  #headnav ul:first-child {
+    border-top: 2px solid #001db4;
+  }
+
+  #headnav li:hover {
+    background-color: rgb(183, 218, 251);
+  }
+  #headnav a {
+    text-decoration: none; 
+    color:black;
+  }
+
+  .description {
+    font-size: 18px;
+    margin-top: 40px;
+  }
+
+  footer {
+    margin-top: 150px;
+    display: grid;
+    background-color: #001db4;
+    color: white;
+    margin-bottom: 0%;
+  }
+  #footernav {
+    list-style-type:none;
+    text-align: center;
+    border-top: 2px solid #001db4;
+  }
+  #footernav ul {
+    padding-left: 0px; 
+  }
+
+  #footernav li {
+    list-style-type:none;
+    display: inline;
+    border-right: 1px solid white;
+    padding: 0px 10px;
+    min-width: 500px;
+  }
+  #footernav li:last-child{
+    border-right: none;
+  }
+  #footernav li:first-child{
+    padding-left: 0px;
+  }
+
+  #footernav a {
+    color: white;
+    text-decoration: none; 
+  }
+  footer div{
+    border-top: 2px solid #001db4;
+  }
+
+  #contacts {
+    display: grid;
+    grid-template-columns: auto;
+    margin: auto;
+    text-align: left;
+    align-content: center;
+  }
+  #contacts div {
+    padding: 0% 20%;
+  }
+  #contactForm {
+    box-sizing: border-box;
+    margin: auto;
+    border:2px solid #3ac203;
+    box-shadow: 3px 3px 3px rgb(255, 208, 0);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    text-align: left;
+    margin-top: 50px;
+    max-width: 400px;
+    margin-bottom: 1rem;
+    
+  }
+  
+  #postForm {
+    box-sizing: border-box;
+    margin: auto;
+    border:2px solid #3ac203;
+    box-shadow: 5px 5px green;
+    border-radius: 18px;
+    margin-bottom: 1rem;
+    background-color: rgb(248, 253, 255);
+    text-align: left;
+    margin-top: 50px;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    padding: 10px;
+    width: 60%;
+  }
+  form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  } 
+ 
+  form>label {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 60%;
+    margin-left: 15%;
+    margin-bottom:.5rem;
+    font-size: 18px;
+  }
+  #postForm input,textarea,select {
+    border-color: rgb(157, 214, 250);
+    margin-left: 10px;
+    margin-right: 10px;
+    width:70%;
+  }
+  #postForm h2 {
+    color: #001db4;
+    text-shadow: 2px 2px rgb(157, 214, 250);
+  }
+  #buttonPost {
+    width: 10%;
+    margin-top: 10px;
+    background-color: #001db4;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    height: 35px;
+    width: 100px;
+    padding: 5px;
+    text-align: center;
+    transition: background-color 1s linear;
+    transition: color 1s linear;
+    margin:auto;
+  }
+  #buttonPost:hover {
+    background-color: rgb(157, 214, 250);
+    color: #001db4;
+  }
+
+  form>* {
+    margin:.5rem;
+  }
+
+  label .error { 
+    display: inline;
+    color:red;
+  }
+  .failure-message {
+    display: inline;
+    color:orangered;
+  }
+  
+  .post {
+    text-align: left;
+    border: 1px solid #001db4;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 1px #3ac203;
+    max-width: 50%;
+    margin: 0px auto 30px auto;
+    position: relative;
+    padding: 5px 15px;
+  }
+
+  .datelocation {
+    position: relative;
+    display: grid;
+    grid-template-rows: 20px 20px;
+    clear: left;
+    margin-bottom: 30px;
+    color: rgb(82, 82, 82);
+  }
+  .post h3 {
+    font-size: 20px;
+    text-align: left;
+    text-shadow: 1px 2px rgb(157, 214, 250);
+  }
+
+  .contactPost {
+    line-height: 0.8em;
+    margin-top: 30px;
+  }
+  #buttonCont {
+    width: 10%;
+    margin-top: 10px;
+    background-color: #3ac203;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    height: 35px;
+    width: 100px;
+    padding: 5px;
+    text-align: center;
+    transition: background-color 1s linear;
+    transition: color 1s linear;
+    margin:auto;
+  }
+  #buttonCont:hover {
+    background-color: rgb(157, 214, 250);
+    color: #001db4;
+  }
+
+  #documentation div {
+    padding-bottom: 40px;
+    text-align: left;
+    width: 60%;
+    margin: auto;
+  }
+  #documentation p{
+    padding-left: 20px;
+  }
+  #documentation h2,h3 {
+    text-align: center;
+  }
+  #validation {
+    display: grid;
+   align-items: center;
+   width: 60%;
+   margin: auto;
+  }
+  #validation img {
+    width: 100%;
+    margin: auto;
+    height: auto;
+  }
+  
+  #ideas {
+    display: grid;
+    grid-template-columns: auto;
+    margin: auto;
+    margin-top: 50px;
+    align-items: center;
+    text-align: center;
+  }
+
+  #ideas2{
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 30px 350px 30px;
+    align-items: center;
+    margin: auto;
+    padding:auto;
+  }
+  #ideas2 button {
+    border-color:  #001db4;
+  }
+  #ideas2 figure {
+    margin:0px;
+    padding: 0%;
+  }
+  #ideas2 img {
+    border: 2px solid rgb(157, 214, 250);
+    box-shadow: 2px 2px 3px 2px rgb(157, 214, 250);
+    width:70%;
+    height:auto;
+  }
+  #references h3 {
+    text-align: left;
+  }
+  #references p {
+    padding-left: 0px;
+  }
+
+}
+
+
+@media screen and (min-width: 769px) {
+  body {
+    padding-top: 0px;
+    text-align: center;
+    background-color: rgb(251, 255, 255);
+    margin:0px;
+  }
+  p,li {
+    font-size: 18px;
+  }
+  #wrapper {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  header {
+    display: grid;
+    grid-template-columns: auto 200px auto;
+    height: 120px;
+  }
+  header img {
+    max-width: 80%;
+    text-align: center;
+    height:120px;
+    width: 173.567px;
+  }
+  #headLeft {
+    background-image: url("images/background.jpg");
+    animation-name: moveLeft;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+  }
+  #headRight {
+    background-image: url("images/background.jpg");
+    animation-name: moveRight;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes moveLeft{
+    0% {
+        background-position: 0% 0%;	
+    } 
+    100% {		
+        background-position: 50% 0%;	
+    }
+}
+  @keyframes moveRight{
+    0% {
+      background-position: 100% 0%;	
+    } 
+    100% {		
+      background-position: 50% 0%;	
+  }
+} 
+  #headnav {
+    font-size: 20px;
+    font-weight: bold;
+    width:80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #headnav ul {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    padding-left: 0%;
+    margin-top:5px;
+  }
+  #headnav li {
+    font-size: 20px;
+    list-style-type:none;
+    align-items: center;
+    font-weight: bold;
+    padding: 15px;
+    transition: background-color 1s linear;
+    border-bottom: 2px solid #001db4;
+  } 
+  #headnav li:hover {
+    background-color: rgb(183, 218, 251);
+  }
+  #headnav a {
+    text-decoration: none; 
+    color:black;
+  }
+
+  .description {
+    font-size: 18px;
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+
+  footer {
+    margin: 150px auto 0% auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items:center;
+    background-color: #001db4;
+    color: white;
+
+  }
+  #footernav {
+    list-style-type:none;
+    line-height: 2rem;
+    text-align: left;
+    border-top: 2px solid #001db4;
+  }
+  #footernav ul {
+    padding-left:50%;
+    
+  }
+  #footernav li {
+    list-style-type:none;
+    width: 30%;
+  }
+  #footernav a {
+    color: white;
+    text-decoration: none; 
+  }
+  footer div{
+    border-top: 2px solid #001db4;
+    padding-right: 50%;
+  }
+
+  
+  #postForm {
+    box-sizing: border-box;
+    margin: auto;
+    border:2px solid #3ac203;
+    box-shadow: 5px 5px green;
+    border-radius: 18px;
+    margin-bottom: 1rem;
+    background-color: rgb(248, 253, 255);
+    text-align: left;
+    margin-top: 50px;
+  }
+  form {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    padding: 10px;
+    width: 70%;
+  }
+  form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  } 
+ 
+  form>label {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 80%;
+    margin-left: 15%;
+    margin-bottom:.5rem;
+    font-size: 18px;
+  }
+  #postForm input,textarea,select {
+    border-color: rgb(157, 214, 250);
+    margin-left: 10px;
+  }
+  #postForm h2 {
+    color: #001db4;
+    text-shadow: 2px 2px rgb(157, 214, 250);
+  }
+  #buttonPost {
+    width: 10%;
+    margin-top: 30px;
+    background-color: #001db4;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    height: 35px;
+    width: 100px;
+    padding: 5px;
+    text-align: center;
+    transition: background-color 1s linear;
+    transition: color 1s linear;
+    margin:auto;
+  }
+  #buttonPost:hover {
+    background-color: rgb(157, 214, 250);
+    color: #001db4;
+  }
+
+  form>* {
+    margin:.5rem;
+  }
+
+  label .error { 
+    display: inline;
+    color:red;
+  }
+  .failure-message {
+    display: inline;
+    color:orangered;
+  }
+
+  .post {
+    text-align: left;
+    align-items: center;
+    border: 1px solid #001db4;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px 1px #3ac203;
+    max-width: 50%;
+    margin: 0px auto 30px auto;
+    position: relative;
+    padding: 0px 30px;
+  }
+  .post h3 {
+    font-size: 22px;
+    text-align: left;
+    text-shadow: 1px 2px rgb(157, 214, 250);
+  }
+  .datelocation {
+    float: right;
+    display: grid;
+    grid-template-rows: 20px 20px;
+    clear: left;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    color: rgb(82, 82, 82);
+  }
+  .contactPost {
+    line-height: 0.8em;
+    margin-top: 30px;
+
+  }
+
+  #contacts {
+    margin-top: 60px;  
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+    margin: 30px;
+    text-align: left;
+    min-width: 590px;
+  } 
+  #contacts div h3 {
+    text-align:left;
+  }
+  #contacts div {
+    padding-left:10%;
+  }
+
+  #contactForm {
+    box-sizing: border-box;
+    margin: auto;
+    border:2px solid #3ac203;
+    box-shadow: 3px 3px 3px rgb(255, 208, 0);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    margin-top: 20px;
+    text-align: left;
+  }
+
+  form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  } 
+ 
+  form>label {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 80%;
+    margin-left: 15%;
+    margin-bottom:.5rem;
+    font-size: 18px;
+  }
+  #contactForm input, #contactForm textarea, #contactForm select {
+    border-color: rgb(255, 208, 0);
+    margin-left: 10px;
+    width:70%;
+  }
+  #contactForm+h2 {
+    text-shadow: 2px 2px rgb(157, 214, 250);
+  }
+  #buttonCont {
+    width: 10%;
+    margin-top: 10px;
+    background-color: #3ac203;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    height: 35px;
+    width: 100px;
+    padding: 5px;
+    text-align: center;
+    transition: background-color 1s linear;
+    transition: color 1s linear;
+    margin:auto;
+  }
+  #buttonCont:hover {
+    background-color: rgb(157, 214, 250);
+    color: #001db4;
+  }
+
+  #documentation div {
+    padding-bottom: 40px;
+    text-align: left;
+    width: 60%;
+    margin: auto;
+  }
+  #documentation p{
+    padding-left: 20px;
+  }
+  #documentation h2,h3 {
+    text-align: center;
+  }
+  #validation {
+    display: grid;
+   align-items: center;
+   width: 60%;
+   margin: auto;
+  }
+  #validation img {
+    width: 80%;
+    margin: auto;
+    height: auto;
+  }
+
+  #ideas {
+    display: grid;
+    grid-template-columns: auto;
+    margin: auto;
+    margin-top: 70px;
+    align-items: center;
+    text-align: center;
+  }
+  #ideas2{
+    display: grid;
+    grid-template-columns: 30px auto 30px;
+    align-items: center;
+    margin: auto;
+  }
+  #ideas2 button {
+    border-color:  #001db4;
+  }
+
+  #ideas2 img {
+    border: 2px solid rgb(157, 214, 250);
+    box-shadow: 2px 2px 3px 2px rgb(157, 214, 250);
+  }
+  #references h3 {
+    text-align: left;
+  }
+  #references p {
+    padding-left: 0px;
+  }
+  
+}
+
+
+
+
